@@ -1,0 +1,25 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.header {
+  background-color: #f4ffee;
+}
+.header section h1 {
+  line-height: 3rem;
+}
+.header .header__nav .ul li {
+  width: 8em;
+}
+.header .header__nav .ul li:hover {
+  background-color: #c5d6c3;
+  border-radius: 3px;
+}
+
+.bor {
+  border: 1px solid blue;
+}
+
+/*# sourceMappingURL=styles.css.map */

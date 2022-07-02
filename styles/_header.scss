@@ -1,0 +1,22 @@
+.header {
+    background-color: $colorPrimario;
+    section {
+        h1 {
+            line-height: 3rem;
+        }
+    }
+    .header__nav {
+        .ul {
+            li {
+                width: 8em;
+                &:hover {
+                    background-color: $colorPrimarioOscuro;
+                    border-radius: 3px;
+                }
+            }
+        }
+    }
+}
+.bor {
+    border:1px   solid blue;
+}
