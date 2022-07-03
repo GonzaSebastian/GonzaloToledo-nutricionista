@@ -5,6 +5,7 @@
         background-repeat: repeat-x;
         .aside__card {
             background-color: $colorGrisT;
+            background-repeat: repeat-y;
             &:hover {
                 background-color: $colorGris;
             }

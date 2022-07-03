@@ -31,6 +31,7 @@
 }
 .bloque__main aside .aside__card {
   background-color: rgba(235, 235, 235, 0.8);
+  background-repeat: repeat-y;
 }
 .bloque__main aside .aside__card:hover {
   background-color: rgb(235, 235, 235);
