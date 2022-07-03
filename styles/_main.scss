@@ -2,10 +2,9 @@
     aside {
         background-image: url(./assets/img/plant-based.jpg);
         background-attachment: fixed;
-        background-repeat: repeat-x;
+        background-repeat: repeat-y;
         .aside__card {
             background-color: $colorGrisT;
-            background-repeat: repeat-y;
             &:hover {
                 background-color: $colorGris;
             }

@@ -27,11 +27,10 @@
 .bloque__main aside {
   background-image: url(./assets/img/plant-based.jpg);
   background-attachment: fixed;
-  background-repeat: repeat-x;
+  background-repeat: repeat-y;
 }
 .bloque__main aside .aside__card {
   background-color: rgba(235, 235, 235, 0.8);
-  background-repeat: repeat-y;
 }
 .bloque__main aside .aside__card:hover {
   background-color: rgb(235, 235, 235);
