@@ -26,21 +26,23 @@
 
 .bloque__main aside {
   background-image: url(../assets/img/plant-based.jpg);
-  background-attachment: scroll;
+  background-attachment: fixed;
   background-repeat: repeat-x;
 }
 .bloque__main aside .aside__card {
   background-color: rgba(235, 235, 235, 0.8);
 }
+.bloque__main aside .aside__card:hover {
+  background-color: rgb(235, 235, 235);
+}
 .bloque__main .main__index {
   background-image: url(../assets/img/piramide.png);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 50%;
+  background-size: 70%;
 }
 .bloque__main .main__index h3 {
-  font-size: 2.5rem;
-  line-height: 8rem;
+  line-height: 7rem;
   font-weight: 100;
 }
 
