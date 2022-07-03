@@ -1,3 +1,21 @@
 .bloque__main {
-    
+    aside {
+        background-image: url(../assets/img/plant-based.jpg);
+        background-attachment: scroll;
+        background-repeat: repeat-x;
+        .aside__card {
+            background-color: $colorGris;
+        }
+    }
+    .main__index {
+        background-image: url(../assets/img/piramide.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 50%;
+        h3 {
+            font-size: 2.5rem;
+            line-height: 8rem;
+            font-weight: 100;
+        }
+    }
 }
