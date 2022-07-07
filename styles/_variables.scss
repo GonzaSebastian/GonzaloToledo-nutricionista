@@ -3,3 +3,24 @@ $colorPrimarioOscuro: #c5d6c3;
 $colorSecundario: #fbe5cc;
 $colorGrisT: rgba(235, 235, 235, 0.8);
 $colorGris: rgba(235, 235, 235);
+
+$colors: (
+    1: #f4ffee,
+    2: #fbe5cc,
+    3: #fbe5cc,  
+    4: #f4ffee,
+    5: #f4ffee,
+    6: #fbe5cc,
+    7: #fbe5cc, 
+    8: #f4ffee
+);
+
+// ESTILOS RECETAS
+$recetas: (
+    border: 1px solid #fbe5cc,
+    borderDestacado: 3px solid red, 
+    background-color: #fbe5cc,
+    background-colorDestacado: orange,
+    width: 25rem,
+    widthDestacado: 95%
+);

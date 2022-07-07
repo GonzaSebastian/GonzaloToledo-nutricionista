@@ -11,10 +11,21 @@
   background-color: #f4ffee;
 }
 .header section h1 {
-  line-height: 3rem;
+  line-height: 3.5rem;
+  font-size: 2.5rem;
+}
+@media screen and (max-width: 1199px) {
+  .header section h1 {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 576px) {
+  .header section h1 {
+    font-size: 1.5rem;
+  }
 }
 .header .header__nav .ul li {
-  width: 8em;
+  width: 7.5em;
 }
 .header .header__nav .ul li:hover {
   background-color: #c5d6c3;
@@ -50,17 +61,68 @@
   font-size: 2rem;
   line-height: 5rem;
 }
+@media screen and (max-width: 576px) {
+  .bloque__main .main__about {
+    line-height: 2rem;
+  }
+}
 .bloque__main .main__articulos div {
   height: 650px;
-  width: 600px;
-  background-color: rgba(235, 235, 235, 0.8);
+  width: 35rem;
   box-shadow: 1px 2px 3px;
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
 }
+.bloque__main .main__receta, .bloque__main .main__recetaDestacada {
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 1px 2px 3px;
+  height: 650px;
+  width: 25rem;
+  border: 1px solid #fbe5cc;
+  background-color: #fbe5cc;
+}
+.bloque__main .main__recetaDestacada {
+  width: 95%;
+  border: 3px solid red;
+  background-color: orange;
+}
 .bloque__main .main__form {
   height: 600px;
   background-color: rgba(251, 229, 204, 0.5);
+}
+
+.articulo-1 {
+  background-color: #f4ffee;
+}
+
+.articulo-2 {
+  background-color: #fbe5cc;
+}
+
+.articulo-3 {
+  background-color: #fbe5cc;
+}
+
+.articulo-4 {
+  background-color: #f4ffee;
+}
+
+.articulo-5 {
+  background-color: #f4ffee;
+}
+
+.articulo-6 {
+  background-color: #fbe5cc;
+}
+
+.articulo-7 {
+  background-color: #fbe5cc;
+}
+
+.articulo-8 {
+  background-color: #f4ffee;
 }
 
 .footer {
