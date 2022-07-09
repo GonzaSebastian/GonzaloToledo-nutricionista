@@ -37,7 +37,7 @@
 }
 
 .bloque__main aside {
-  background-image: url(./assets/img/plant-based.jpg);
+  background-image: url(../../assets/img/plant-based.jpg);
   background-attachment: fixed;
   background-repeat: repeat;
 }
@@ -48,7 +48,7 @@
   background-color: rgb(235, 235, 235);
 }
 .bloque__main .main__index {
-  background-image: url(./assets/img/piramide.png);
+  background-image: url(../../assets/img/piramide.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50%;
@@ -81,12 +81,12 @@
   height: 650px;
   width: 25rem;
   border: 1px solid #fbe5cc;
-  background-color: #fbe5cc;
+  background-color: rgba(235, 235, 235, 0.8);
 }
 .bloque__main .main__recetaDestacada {
   width: 95%;
-  border: 3px solid red;
-  background-color: orange;
+  border: 5px ridge rgba(235, 235, 235, 0.8);
+  background-color: rgb(235, 235, 235);
 }
 .bloque__main .main__form {
   height: 600px;
