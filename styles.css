@@ -94,6 +94,12 @@
   margin-bottom: 1.5rem;
   background-color: rgba(235, 235, 235, 0.8);
 }
+@media screen and (max-width: 576px) {
+  .bloque__main .main__articulos div {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
 .bloque__main .main__receta, .bloque__main .main__recetaDestacada {
   margin-bottom: 1.5rem;
   margin-top: 1.5rem;
