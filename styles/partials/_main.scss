@@ -23,7 +23,12 @@
     .main__about {
         font-size: 2rem;
         line-height: 5rem;
+        @include tablet {
+            font-size: 1.6rem;
+            line-height: 3.5rem;
+        }
         @include movil {
+            font-size: 1.3rem;
             line-height: 2rem;
         }
     }
