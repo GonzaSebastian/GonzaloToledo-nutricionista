@@ -17,8 +17,8 @@ $colors: (
 
 // ESTILOS RECETAS
 $recetas: (
-    border: 1px solid #fbe5cc,
-    borderDestacado: 5px ridge $colorGrisT, 
+    border: 2px solid $colorPrimarioOscuro,
+    borderDestacado: 5px ridge $colorPrimarioOscuro, 
     background-color: $colorGrisT,
     background-colorDestacado: $colorGris,
     width: 25rem,

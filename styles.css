@@ -81,12 +81,12 @@
   box-shadow: 1px 2px 3px;
   height: 650px;
   width: 25rem;
-  border: 1px solid #fbe5cc;
+  border: 2px solid #c5d6c3;
   background-color: rgba(235, 235, 235, 0.8);
 }
 .bloque__main .main__recetaDestacada {
   width: 95%;
-  border: 5px ridge rgba(235, 235, 235, 0.8);
+  border: 5px ridge #c5d6c3;
   background-color: rgb(235, 235, 235);
 }
 .bloque__main .main__form {
