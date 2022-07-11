@@ -49,6 +49,11 @@
   border: 1px solid blue;
 }
 
+.btm {
+  background-image: linear-gradient(#c5d6c3, #f4ffee);
+  border-radius: 10px;
+}
+
 .bloque__main aside {
   background-image: url(./assets/img/plant-based.jpg);
   background-attachment: fixed;
@@ -69,6 +74,20 @@
 .bloque__main .main__index h3 {
   line-height: 7rem;
   font-weight: 100;
+}
+.bloque__main .main__index .main__indexBtn {
+  color: rgba(17, 17, 17, 0.5);
+  font-size: 3rem;
+  display: none;
+  position: sticky;
+  bottom: 2rem;
+}
+@media screen and (max-width: 576px) {
+  .bloque__main .main__index .main__indexBtn {
+    display: block;
+    border: 1px solid red;
+    text-align: center;
+  }
 }
 .bloque__main .main__about {
   font-size: 2rem;
