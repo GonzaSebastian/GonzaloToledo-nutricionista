@@ -71,10 +71,6 @@
   background-position: center;
   background-size: 50%;
 }
-.bloque__main .main__index h3 {
-  line-height: 7rem;
-  font-weight: 100;
-}
 .bloque__main .main__index .main__indexBtn {
   color: rgba(17, 17, 17, 0.5);
   font-size: 3rem;
@@ -85,9 +81,12 @@
 @media screen and (max-width: 576px) {
   .bloque__main .main__index .main__indexBtn {
     display: block;
-    border: 1px solid red;
     text-align: center;
   }
+}
+.bloque__main .main__index h3 {
+  line-height: 7rem;
+  font-weight: 100;
 }
 .bloque__main .main__about {
   font-size: 2rem;

@@ -15,10 +15,6 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: 50%;
-        h3 {
-            line-height: 7rem;
-            font-weight: 100;
-        }
         .main__indexBtn {
             color: rgba(17, 17, 17, 0.5);
             font-size: 3rem;
@@ -27,10 +23,12 @@
             bottom: 2rem;
             @include movil {
                 display: block;
-                border: 1px solid red;
                 text-align: center;
             }
-
+        }
+        h3 {
+            line-height: 7rem;
+            font-weight: 100;
         }
     }
     .main__about {
