@@ -7,6 +7,10 @@
   font-family: "Cinzel", sans-serif;
 }
 
+.body {
+  overflow-x: hidden;
+}
+
 .header {
   background-color: #f4ffee;
 }
@@ -88,23 +92,34 @@
   line-height: 7rem;
   font-weight: 100;
 }
-.bloque__main .main__about {
+.bloque__main .main__pages {
+  background-image: url(./assets/img/water.jpg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: auto;
+}
+.bloque__main .main__pages .main__about {
   font-size: 2rem;
   line-height: 5rem;
+  background-color: rgba(235, 235, 235, 0.8);
+  margin-top: 2rem;
+  margin-left: 1rem;
+  border-radius: 20px;
+  box-shadow: 2px 5px 5px;
 }
 @media screen and (max-width: 1199px) {
-  .bloque__main .main__about {
+  .bloque__main .main__pages .main__about {
     font-size: 1.6rem;
     line-height: 3.5rem;
   }
 }
 @media screen and (max-width: 576px) {
-  .bloque__main .main__about {
+  .bloque__main .main__pages .main__about {
     font-size: 1.3rem;
     line-height: 2rem;
   }
 }
-.bloque__main .main__articulos div {
+.bloque__main .main__pages .main__articulos div {
   height: 650px;
   width: 35rem;
   box-shadow: 1px 2px 3px;
@@ -113,12 +128,12 @@
   background-color: rgba(235, 235, 235, 0.8);
 }
 @media screen and (max-width: 576px) {
-  .bloque__main .main__articulos div {
+  .bloque__main .main__pages .main__articulos div {
     margin-left: 1rem;
     margin-right: 1rem;
   }
 }
-.bloque__main .main__receta, .bloque__main .main__recetaDestacada {
+.bloque__main .main__pages .main__receta, .bloque__main .main__pages .main__recetaDestacada {
   margin-bottom: 1.5rem;
   margin-top: 1.5rem;
   border-radius: 0.5rem;
@@ -128,12 +143,12 @@
   border: 2px solid #c5d6c3;
   background-color: rgba(235, 235, 235, 0.8);
 }
-.bloque__main .main__recetaDestacada {
+.bloque__main .main__pages .main__recetaDestacada {
   width: 95%;
   border: 5px ridge #c5d6c3;
   background-color: rgb(235, 235, 235);
 }
-.bloque__main .main__form {
+.bloque__main .main__pages .main__form {
   height: 600px;
   background-color: rgba(251, 229, 204, 0.5);
 }
@@ -142,34 +157,74 @@
   background-color: #fbe5cc;
 }
 .footer .footer__redes {
-  animation-name: logoRedes;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in;
-  animation-duration: 3s;
+  list-style: none;
 }
-
-@keyframes logoRedes {
-  50% {
-    transform: translateY(-160px);
-  }
-  55% {
-    transform: translateY(-160px);
-  }
-  75% {
-    transform: translateY(0px);
-  }
-  85% {
-    transform: translateY(-10px);
-  }
-  90% {
-    transform: translateY(0px);
-  }
-  95% {
-    transform: translateY(-10px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
+.footer .footer__redes li {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+.footer .footer__redes li:hover .bi {
+  color: #ffffff;
+}
+.footer .footer__redes li:hover:nth-child(1) a {
+  background-color: #ff4e72;
+}
+.footer .footer__redes li:hover:nth-child(1) a::before {
+  background-color: #d63959;
+}
+.footer .footer__redes li:hover:nth-child(1) a::after {
+  background-color: #ff5c7f;
+}
+.footer .footer__redes li:hover:nth-child(2) a {
+  background-color: #3b5999;
+}
+.footer .footer__redes li:hover:nth-child(2) a::before {
+  background-color: #2f477a;
+}
+.footer .footer__redes li:hover:nth-child(2) a::after {
+  background-color: #4e69a3;
+}
+.footer .footer__redes li a {
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 40px;
+  color: #555555;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+  box-shadow: -20px 20px 10px rgba(0, 0, 0, 0.5);
+  transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(0, 0);
+}
+.footer .footer__redes li a::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: -10px;
+  height: 100%;
+  width: 10px;
+  background-color: #b2b2b2;
+  transition: 0.5s;
+  transform: rotate(0deg) skewY(-45deg);
+}
+.footer .footer__redes li a::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: -5px;
+  height: 10px;
+  width: 100%;
+  background-color: #e5e5e5;
+  transition: 0.5s;
+  transform: rotate(0deg) skewX(-45deg);
+}
+.footer .footer__redes li a:hover {
+  transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(20px, -20px);
+  box-shadow: -50px 50px 50px rgba(0, 0, 0, 0.5);
 }
 
 /*# sourceMappingURL=styles.css.map */
