@@ -74,6 +74,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50%;
+  background-color: #f0f8ff;
 }
 .bloque__main .main__index .main__indexBtn {
   color: rgba(17, 17, 17, 0.5);
@@ -93,19 +94,13 @@
   font-weight: 100;
 }
 .bloque__main .main__pages {
-  background-image: url(./assets/img/water.jpg);
-  background-repeat: no-repeat;
-  background-position: bottom;
-  background-size: auto;
+  background-color: #f0f8ff;
 }
 .bloque__main .main__pages .main__about {
   font-size: 2rem;
   line-height: 5rem;
-  background-color: rgba(235, 235, 235, 0.8);
   margin-top: 2rem;
   margin-left: 1rem;
-  border-radius: 20px;
-  box-shadow: 2px 5px 5px;
 }
 @media screen and (max-width: 1199px) {
   .bloque__main .main__pages .main__about {
@@ -155,6 +150,9 @@
 
 .footer {
   background-color: #fbe5cc;
+}
+.footer .footer__slogan {
+  text-shadow: 1px 5px 5px;
 }
 .footer .footer__redes {
   list-style: none;

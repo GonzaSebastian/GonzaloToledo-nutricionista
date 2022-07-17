@@ -15,6 +15,7 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: 50%;
+        background-color: $colorFondo;
         .main__indexBtn {
             color: rgba(17, 17, 17, 0.5);
             font-size: 3rem;
@@ -32,18 +33,12 @@
         }
     }
     .main__pages {
-        background-image: url(./assets/img/water.jpg);
-        background-repeat: no-repeat;
-        background-position: bottom;
-        background-size: auto;
+        background-color: $colorFondo;
         .main__about {
             font-size: 2rem;
             line-height: 5rem;
-            background-color: $colorGrisT;
             margin-top: 2rem;
             margin-left: 1rem;
-            border-radius: 20px;
-            box-shadow: 2px 5px 5px;
             @include tablet {
                 font-size: 1.6rem;
                 line-height: 3.5rem;
