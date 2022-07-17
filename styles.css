@@ -7,10 +7,6 @@
   font-family: "Cinzel", sans-serif;
 }
 
-.body {
-  overflow-x: hidden;
-}
-
 .header {
   background-color: #f4ffee;
 }
@@ -76,19 +72,6 @@
   background-size: 50%;
   background-color: #f0f8ff;
 }
-.bloque__main .main__index .main__indexBtn {
-  color: rgba(17, 17, 17, 0.5);
-  font-size: 3rem;
-  display: none;
-  position: sticky;
-  bottom: 2rem;
-}
-@media screen and (max-width: 576px) {
-  .bloque__main .main__index .main__indexBtn {
-    display: block;
-    text-align: center;
-  }
-}
 .bloque__main .main__index h3 {
   line-height: 7rem;
   font-weight: 100;
@@ -146,6 +129,19 @@
 .bloque__main .main__pages .main__form {
   height: 600px;
   background-color: rgba(251, 229, 204, 0.5);
+}
+
+.main__btn {
+  color: rgba(17, 17, 17, 0.5);
+  font-size: 3rem;
+  display: none;
+  bottom: 2rem;
+}
+@media screen and (max-width: 576px) {
+  .main__btn {
+    display: block;
+    position: sticky;
+  }
 }
 
 .footer {

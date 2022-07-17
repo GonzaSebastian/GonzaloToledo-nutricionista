@@ -16,17 +16,6 @@
         background-position: center;
         background-size: 50%;
         background-color: $colorFondo;
-        .main__indexBtn {
-            color: rgba(17, 17, 17, 0.5);
-            font-size: 3rem;
-            display: none;
-            position: sticky;
-            bottom: 2rem;
-            @include movil {
-                display: block;
-                text-align: center;
-            }
-        }
         h3 {
             line-height: 7rem;
             font-weight: 100;
@@ -85,4 +74,13 @@
     }
 
 }
-
+.main__btn {
+    color: rgba(17, 17, 17, 0.5);
+    font-size: 3rem;
+    display: none;
+    bottom: 2rem;
+    @include movil {
+        display: block;
+        position: sticky;
+    }
+}
