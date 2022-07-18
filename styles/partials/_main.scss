@@ -5,6 +5,8 @@
         background-repeat: repeat;
         .aside__card {
             background-color: $colorGrisT;
+            -webkit-animation: slit-in-vertical 0.45s ease-out both;
+	        animation: slit-in-vertical 0.45s ease-out both;
             &:hover {
                 background-color: $colorGris;
             }
@@ -16,9 +18,13 @@
         background-position: center;
         background-size: 50%;
         background-color: $colorFondo;
-        h3 {
-            line-height: 7rem;
-            font-weight: 100;
+        div {
+            h3 {
+                line-height: 7rem;
+                font-weight: 100;
+                -webkit-animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+                animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            }
         }
     }
     .main__pages {
