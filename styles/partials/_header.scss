@@ -25,12 +25,12 @@
         .ul {
             @for $nav from 1 through 5 {
                 li:nth-child(#{$nav}) {
-                    animation-delay: 0.1s * $nav;
+                    animation-delay: 0.05s * $nav;
                 }
             }
             li {
-                -webkit-animation:slide-in-top .4s cubic-bezier(.25,.46,.45,.94) both;
-                    animation:slide-in-top .4s cubic-bezier(.25,.46,.45,.94) both;
+                -webkit-animation: slide-in-fwd-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+                    animation: slide-in-fwd-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
                 width: 7.5em;
                 &:hover {
                     background-color: $colorPrimarioOscuro;

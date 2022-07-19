@@ -29,11 +29,21 @@
     }
     .main__pages {
         background-color: $colorFondo;
+        .main__aboutImg {
+            width: 25rem;
+            height: min-content;
+            border-radius: 50%;
+            -webkit-animation: fade-in 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+        }
         .main__about {
             font-size: 2rem;
             line-height: 5rem;
             margin-top: 2rem;
             margin-left: 1rem;
+            -webkit-animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	            animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            animation-delay: 0.5s;
             @include tablet {
                 font-size: 1.6rem;
                 line-height: 3.5rem;
@@ -44,6 +54,11 @@
             }
         }
         .main__articulos {
+            @for $art from 1 through 8 {
+                div:nth-child(#{$art}) {
+                    animation-delay: 0.09s * $art;
+                }
+            }
             div {
                 height: 650px;
                 width: 35rem;
@@ -51,6 +66,7 @@
                 margin-top: 1.5rem;
                 margin-bottom: 1.5rem;
                 background-color: $colorGrisT;
+                @extend .animacionContenido;
                 @include movil {
                     margin-left: 1rem;
                     margin-right: 1rem;
@@ -66,6 +82,12 @@
             width: map-get($recetas, width);
             border: map-get($recetas, border);
             background-color: map-get($recetas , background-color);
+            @extend .animacionContenido;
+            @for $rec from 1 through 8 {
+                &:nth-child(#{$rec}) {
+                    animation-delay: 0.09s * $rec;
+                }
+            }
         }
         .main__recetaDestacada {
             @extend .main__receta;

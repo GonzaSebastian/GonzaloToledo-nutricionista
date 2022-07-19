@@ -9,27 +9,27 @@
   border-radius: 10px;
 }
 
-@-webkit-keyframes slide-in-top {
+@-webkit-keyframes slide-in-fwd-center {
   0% {
-    -webkit-transform: translateY(-1000px);
-    transform: translateY(-1000px);
+    -webkit-transform: translateZ(-1400px);
+    transform: translateZ(-1400px);
     opacity: 0;
   }
   100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
     opacity: 1;
   }
 }
-@keyframes slide-in-top {
+@keyframes slide-in-fwd-center {
   0% {
-    -webkit-transform: translateY(-1000px);
-    transform: translateY(-1000px);
+    -webkit-transform: translateZ(-1400px);
+    transform: translateZ(-1400px);
     opacity: 0;
   }
   100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
     opacity: 1;
   }
 }
@@ -49,6 +49,46 @@
   0% {
     -webkit-transform: translateX(1000px);
     transform: translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-1000px);
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-1000px);
+    transform: translateX(-1000px);
     opacity: 0;
   }
   100% {
@@ -89,6 +129,43 @@
     transform: translateZ(0) rotateY(0);
   }
 }
+@-webkit-keyframes swing-in-top-fwd {
+  0% {
+    -webkit-transform: rotateX(-100deg);
+    transform: rotateX(-100deg);
+    -webkit-transform-origin: top;
+    transform-origin: top;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+    -webkit-transform-origin: top;
+    transform-origin: top;
+    opacity: 1;
+  }
+}
+@keyframes swing-in-top-fwd {
+  0% {
+    -webkit-transform: rotateX(-100deg);
+    transform: rotateX(-100deg);
+    -webkit-transform-origin: top;
+    transform-origin: top;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+    -webkit-transform-origin: top;
+    transform-origin: top;
+    opacity: 1;
+  }
+}
+.animacionContenido, .bloque__main .main__pages .main__receta, .bloque__main .main__pages .main__recetaDestacada, .bloque__main .main__pages .main__articulos div {
+  -webkit-animation: swing-in-top-fwd 1.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+  animation: swing-in-top-fwd 1.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+}
+
 * {
   margin: 0px;
   padding: 0px;
@@ -127,23 +204,23 @@
   }
 }
 .header .header__nav .ul li:nth-child(1) {
-  animation-delay: 0.1s;
+  animation-delay: 0.05s;
 }
 .header .header__nav .ul li:nth-child(2) {
-  animation-delay: 0.2s;
+  animation-delay: 0.1s;
 }
 .header .header__nav .ul li:nth-child(3) {
-  animation-delay: 0.3s;
+  animation-delay: 0.15s;
 }
 .header .header__nav .ul li:nth-child(4) {
-  animation-delay: 0.4s;
+  animation-delay: 0.2s;
 }
 .header .header__nav .ul li:nth-child(5) {
-  animation-delay: 0.5s;
+  animation-delay: 0.25s;
 }
 .header .header__nav .ul li {
-  -webkit-animation: slide-in-top 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  animation: slide-in-top 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  -webkit-animation: slide-in-fwd-center 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-in-fwd-center 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   width: 7.5em;
 }
 .header .header__nav .ul li:hover {
@@ -180,11 +257,21 @@
 .bloque__main .main__pages {
   background-color: #f0f8ff;
 }
+.bloque__main .main__pages .main__aboutImg {
+  width: 25rem;
+  height: min-content;
+  border-radius: 50%;
+  -webkit-animation: fade-in 1.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in 1.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
 .bloque__main .main__pages .main__about {
   font-size: 2rem;
   line-height: 5rem;
   margin-top: 2rem;
   margin-left: 1rem;
+  -webkit-animation: slide-in-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-in-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation-delay: 0.5s;
 }
 @media screen and (max-width: 1199px) {
   .bloque__main .main__pages .main__about {
@@ -197,6 +284,30 @@
     font-size: 1.3rem;
     line-height: 2rem;
   }
+}
+.bloque__main .main__pages .main__articulos div:nth-child(1) {
+  animation-delay: 0.09s;
+}
+.bloque__main .main__pages .main__articulos div:nth-child(2) {
+  animation-delay: 0.18s;
+}
+.bloque__main .main__pages .main__articulos div:nth-child(3) {
+  animation-delay: 0.27s;
+}
+.bloque__main .main__pages .main__articulos div:nth-child(4) {
+  animation-delay: 0.36s;
+}
+.bloque__main .main__pages .main__articulos div:nth-child(5) {
+  animation-delay: 0.45s;
+}
+.bloque__main .main__pages .main__articulos div:nth-child(6) {
+  animation-delay: 0.54s;
+}
+.bloque__main .main__pages .main__articulos div:nth-child(7) {
+  animation-delay: 0.63s;
+}
+.bloque__main .main__pages .main__articulos div:nth-child(8) {
+  animation-delay: 0.72s;
 }
 .bloque__main .main__pages .main__articulos div {
   height: 650px;
@@ -221,6 +332,30 @@
   width: 25rem;
   border: 2px solid #c5d6c3;
   background-color: rgba(235, 235, 235, 0.8);
+}
+.bloque__main .main__pages .main__receta:nth-child(1), .bloque__main .main__pages .main__recetaDestacada:nth-child(1) {
+  animation-delay: 0.09s;
+}
+.bloque__main .main__pages .main__receta:nth-child(2), .bloque__main .main__pages .main__recetaDestacada:nth-child(2) {
+  animation-delay: 0.18s;
+}
+.bloque__main .main__pages .main__receta:nth-child(3), .bloque__main .main__pages .main__recetaDestacada:nth-child(3) {
+  animation-delay: 0.27s;
+}
+.bloque__main .main__pages .main__receta:nth-child(4), .bloque__main .main__pages .main__recetaDestacada:nth-child(4) {
+  animation-delay: 0.36s;
+}
+.bloque__main .main__pages .main__receta:nth-child(5), .bloque__main .main__pages .main__recetaDestacada:nth-child(5) {
+  animation-delay: 0.45s;
+}
+.bloque__main .main__pages .main__receta:nth-child(6), .bloque__main .main__pages .main__recetaDestacada:nth-child(6) {
+  animation-delay: 0.54s;
+}
+.bloque__main .main__pages .main__receta:nth-child(7), .bloque__main .main__pages .main__recetaDestacada:nth-child(7) {
+  animation-delay: 0.63s;
+}
+.bloque__main .main__pages .main__receta:nth-child(8), .bloque__main .main__pages .main__recetaDestacada:nth-child(8) {
+  animation-delay: 0.72s;
 }
 .bloque__main .main__pages .main__recetaDestacada {
   width: 95%;
