@@ -1,7 +1,9 @@
 .footer {
     background-color: $colorSecundario;
     .footer__slogan {
-        text-shadow: 1px 5px 5px;
+        @include tablet {
+            font-size: 1.5rem;
+        }
     }
     .footer__redes {
         list-style: none;
@@ -10,26 +12,54 @@
             align-items: flex-end;
             justify-content: space-between;
             gap: 1.5rem;
-            &:hover {
-                .bi {
-                    color: #ffffff;
-                }
-                &:nth-child(1) a {
-                    background-color: #ff4e72;
-                    &::before {
-                        background-color: #d63959;
+            // @include tablet {
+            //     a {
+            //         :nth-child(1) {
+            //             background-color: #ff4e72;
+            //             &::before {
+            //             background-color: #d63959;
+            //             }
+            //             &::after {
+            //             background-color: #ff5c7f;
+            //             } 
+            //         }
+            //         :nth-child(2) a {
+            //             background-color: #ff4e72;
+            //             &::before {
+            //             background-color: #d63959;
+            //             }
+            //             &::after {
+            //             background-color: #ff5c7f;
+            //             } 
+            //         }
+            //     }
+            //     .bi {
+            //         color: #ffffff;
+
+            //     }
+            // }
+            @include desktop {
+                &:hover {
+                    .bi {
+                        color: #ffffff;
                     }
-                    &::after {
-                        background-color: #ff5c7f;
+                    &:nth-child(1) a {
+                        background-color: #ff4e72;
+                        &::before {
+                            background-color: #d63959;
+                        }
+                        &::after {
+                            background-color: #ff5c7f;
+                        }
                     }
-                }
-                &:nth-child(2) a {
-                    background-color: #3b5999;
-                    &::before {
-                        background-color: #2f477a;
-                    }
-                    &::after {
-                        background-color: #4e69a3;
+                    &:nth-child(2) a {
+                        background-color: #3b5999;
+                        &::before {
+                            background-color: #2f477a;
+                        }
+                        &::after {
+                            background-color: #4e69a3;
+                        }
                     }
                 }
             }
@@ -68,10 +98,13 @@
                     transition: 0.5s;
                     transform: rotate(0deg) skewX(-45deg);
                 }
-                &:hover {
-                    transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(20px, -20px);
-                    box-shadow: -50px 50px 50px rgba(0, 0, 0, 0.5); 
+                @include desktop {
+                    &:hover {
+                        transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(20px, -20px);
+                        box-shadow: -50px 50px 50px rgba(0, 0, 0, 0.5); 
+                    }
                 }
+
             }
         }
     }

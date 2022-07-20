@@ -244,9 +244,15 @@
 .bloque__main .main__index {
   background-image: url(./assets/img/piramide.png);
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: 50%;
+  background-position: left;
+  background-position: 7rem;
+  background-size: 60%;
   background-color: #f0f8ff;
+}
+@media screen and (max-width: 1199px) {
+  .bloque__main .main__index {
+    background-position: center;
+  }
 }
 .bloque__main .main__index div h3 {
   line-height: 7rem;
@@ -383,8 +389,10 @@
 .footer {
   background-color: #fbe5cc;
 }
-.footer .footer__slogan {
-  text-shadow: 1px 5px 5px;
+@media screen and (max-width: 1199px) {
+  .footer .footer__slogan {
+    font-size: 1.5rem;
+  }
 }
 .footer .footer__redes {
   list-style: none;
@@ -395,26 +403,28 @@
   justify-content: space-between;
   gap: 1.5rem;
 }
-.footer .footer__redes li:hover .bi {
-  color: #ffffff;
-}
-.footer .footer__redes li:hover:nth-child(1) a {
-  background-color: #ff4e72;
-}
-.footer .footer__redes li:hover:nth-child(1) a::before {
-  background-color: #d63959;
-}
-.footer .footer__redes li:hover:nth-child(1) a::after {
-  background-color: #ff5c7f;
-}
-.footer .footer__redes li:hover:nth-child(2) a {
-  background-color: #3b5999;
-}
-.footer .footer__redes li:hover:nth-child(2) a::before {
-  background-color: #2f477a;
-}
-.footer .footer__redes li:hover:nth-child(2) a::after {
-  background-color: #4e69a3;
+@media screen and (min-width: 1200px) {
+  .footer .footer__redes li:hover .bi {
+    color: #ffffff;
+  }
+  .footer .footer__redes li:hover:nth-child(1) a {
+    background-color: #ff4e72;
+  }
+  .footer .footer__redes li:hover:nth-child(1) a::before {
+    background-color: #d63959;
+  }
+  .footer .footer__redes li:hover:nth-child(1) a::after {
+    background-color: #ff5c7f;
+  }
+  .footer .footer__redes li:hover:nth-child(2) a {
+    background-color: #3b5999;
+  }
+  .footer .footer__redes li:hover:nth-child(2) a::before {
+    background-color: #2f477a;
+  }
+  .footer .footer__redes li:hover:nth-child(2) a::after {
+    background-color: #4e69a3;
+  }
 }
 .footer .footer__redes li a {
   position: relative;
@@ -452,9 +462,11 @@
   transition: 0.5s;
   transform: rotate(0deg) skewX(-45deg);
 }
-.footer .footer__redes li a:hover {
-  transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(20px, -20px);
-  box-shadow: -50px 50px 50px rgba(0, 0, 0, 0.5);
+@media screen and (min-width: 1200px) {
+  .footer .footer__redes li a:hover {
+    transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(20px, -20px);
+    box-shadow: -50px 50px 50px rgba(0, 0, 0, 0.5);
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

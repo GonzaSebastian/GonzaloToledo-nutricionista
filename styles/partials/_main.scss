@@ -15,9 +15,13 @@
     .main__index {
         background-image: url(./assets/img/piramide.png);
         background-repeat: no-repeat;
-        background-position: center;
-        background-size: 50%;
+        background-position: left;
+        background-position: 7rem;
+        background-size: 60%;
         background-color: $colorFondo;
+        @include tablet {
+            background-position: center;
+        }
         div {
             h3 {
                 line-height: 7rem;
