@@ -17,10 +17,11 @@
         background-repeat: no-repeat;
         background-position: left;
         background-position: 7rem;
-        background-size: 60%;
+        background-size: 50%;
         background-color: $colorFondo;
         @include tablet {
             background-position: center;
+            background-size: 70%;
         }
         div {
             h3 {
@@ -39,6 +40,9 @@
             border-radius: 50%;
             -webkit-animation: fade-in 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 	        animation: fade-in 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+            @include tablet {
+                width: 15rem;
+            }
         }
         .main__about {
             font-size: 2rem;
@@ -111,8 +115,9 @@
     font-size: 3rem;
     display: none;
     bottom: 2rem;
-    @include movil {
+    @include tablet {
         display: block;
         position: sticky;
+        text-align: center;
     }
 }

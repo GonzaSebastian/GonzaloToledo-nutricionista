@@ -246,12 +246,13 @@
   background-repeat: no-repeat;
   background-position: left;
   background-position: 7rem;
-  background-size: 60%;
+  background-size: 50%;
   background-color: #f0f8ff;
 }
 @media screen and (max-width: 1199px) {
   .bloque__main .main__index {
     background-position: center;
+    background-size: 70%;
   }
 }
 .bloque__main .main__index div h3 {
@@ -269,6 +270,11 @@
   border-radius: 50%;
   -webkit-animation: fade-in 1.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   animation: fade-in 1.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+@media screen and (max-width: 1199px) {
+  .bloque__main .main__pages .main__aboutImg {
+    width: 15rem;
+  }
 }
 .bloque__main .main__pages .main__about {
   font-size: 2rem;
@@ -379,10 +385,11 @@
   display: none;
   bottom: 2rem;
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 1199px) {
   .main__btn {
     display: block;
     position: sticky;
+    text-align: center;
   }
 }
 
