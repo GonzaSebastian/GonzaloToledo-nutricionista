@@ -7,37 +7,33 @@
     }
     .footer__redes {
         list-style: none;
+        gap: 1rem;
+        @include tablet {
+        }
         li {
-            display: flex;
-            align-items: flex-end;
-            justify-content: space-between;
-            gap: 1.5rem;
-            // @include tablet {
-            //     a {
-            //         :nth-child(1) {
-            //             background-color: #ff4e72;
-            //             &::before {
-            //             background-color: #d63959;
-            //             }
-            //             &::after {
-            //             background-color: #ff5c7f;
-            //             } 
-            //         }
-            //         :nth-child(2) a {
-            //             background-color: #ff4e72;
-            //             &::before {
-            //             background-color: #d63959;
-            //             }
-            //             &::after {
-            //             background-color: #ff5c7f;
-            //             } 
-            //         }
-            //     }
-            //     .bi {
-            //         color: #ffffff;
-
-            //     }
-            // }
+            @include tablet {                   
+                .bi {
+                    color: #ffffff;
+                }
+                &:nth-child(1) a {
+                    background-color: $colorInstagram;
+                    &::before {
+                        background-color: $colorOscuroIG;
+                    }
+                    &::after {
+                        background-color: $colorClaroIG;
+                    }
+                }
+                &:nth-child(2) a {
+                    background-color: $colorFacebook;
+                    &::before {
+                        background-color: $colorOscuroFB;
+                    }
+                    &::after {
+                        background-color: $colorClaroFB;
+                    }
+                }
+            }
             @include desktop {
                 &:hover {
                     .bi {
@@ -110,3 +106,7 @@
     }
 }
 
+.bor {
+    border: 1px solid red;
+
+}
