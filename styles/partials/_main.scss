@@ -86,7 +86,7 @@
             margin-top: 1.5rem;
             border-radius: 0.5rem;
             box-shadow: 1px 2px 3px;
-            height: 650px;
+            height: auto;
             width: map-get($recetas, width);
             border: map-get($recetas, border);
             background-color: map-get($recetas , background-color);
@@ -96,12 +96,36 @@
                     animation-delay: 0.09s * $rec;
                 }
             }
+            h6 {
+                position: absolute;
+                width: 100%;
+                background-color: $colorGrisT;
+                text-align: center;
+                font-size: 1.5rem;
+                font-weight: bold;
+                margin-top: 20px;
+            }
+            p {
+                font-weight: 600;
+                font-size: 1rem;
+            }
         }
         .main__recetaDestacada {
             @extend .main__receta;
             width: map-get($recetas, widthDestacado );
             border: map-get($recetas , borderDestacado);
             background-color: map-get($recetas, background-colorDestacado );
+            display: flex;
+            flex-direction: row;
+            @include tablet {
+                flex-direction: column;
+            }
+            .parrafoDestacado {
+                margin-top: 5rem;
+            }
+            img {
+                height: fit-content;
+            }
         }
         .main__form {
             height: 600px;

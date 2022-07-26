@@ -340,8 +340,8 @@
   margin-top: 1.5rem;
   border-radius: 0.5rem;
   box-shadow: 1px 2px 3px;
-  height: 650px;
-  width: 25rem;
+  height: auto;
+  width: 450px;
   border: 2px solid #c5d6c3;
   background-color: rgba(235, 235, 235, 0.8);
 }
@@ -369,10 +369,36 @@
 .bloque__main .main__pages .main__receta:nth-child(8), .bloque__main .main__pages .main__recetaDestacada:nth-child(8) {
   animation-delay: 0.72s;
 }
+.bloque__main .main__pages .main__receta h6, .bloque__main .main__pages .main__recetaDestacada h6 {
+  position: absolute;
+  width: 100%;
+  background-color: rgba(235, 235, 235, 0.8);
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 20px;
+}
+.bloque__main .main__pages .main__receta p, .bloque__main .main__pages .main__recetaDestacada p {
+  font-weight: 600;
+  font-size: 1rem;
+}
 .bloque__main .main__pages .main__recetaDestacada {
   width: 95%;
   border: 5px ridge #c5d6c3;
-  background-color: rgb(235, 235, 235);
+  background-color: #c5d6c3;
+  display: flex;
+  flex-direction: row;
+}
+@media screen and (max-width: 1199px) {
+  .bloque__main .main__pages .main__recetaDestacada {
+    flex-direction: column;
+  }
+}
+.bloque__main .main__pages .main__recetaDestacada .parrafoDestacado {
+  margin-top: 5rem;
+}
+.bloque__main .main__pages .main__recetaDestacada img {
+  height: fit-content;
 }
 .bloque__main .main__pages .main__form {
   height: 600px;
