@@ -1,21 +1,21 @@
 $colorPrimario: #f4ffee;
 $colorPrimarioOscuro: #c5d6c3;
 $colorSecundario: #fbe5cc;
-$colorGrisT: rgba(235, 235, 235, 0.8);
+$colorGrisT: rgba(235, 235, 235, 0.7);
 $colorGris: rgba(235, 235, 235);
-$colorFondo: #f0f8ff;
 $colorFacebook: #4e69a3;
 $colorOscuroFB: #2f477a;
 $colorClaroFB: #3b5999;
 $colorInstagram: #ff5c7f;
 $colorOscuroIG: #d63959;
 $colorClaroIG: #ff4e72;
+$colorGrisSombra: rgba(82, 82, 82, 0.5); 
 
 // ESTILOS RECETAS
 $recetas: (
     border: 2px solid $colorPrimarioOscuro,
-    borderDestacado: 5px ridge $colorPrimarioOscuro, 
-    background-color: $colorGrisT,
+    borderDestacado: 3px solid $colorPrimario, 
+    background-color: $colorPrimario,
     background-colorDestacado: $colorPrimarioOscuro,
     width: 450px,
     widthDestacado: 95%
