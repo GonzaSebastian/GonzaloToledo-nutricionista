@@ -240,6 +240,7 @@
   -webkit-animation: slide-in-fwd-center 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation: slide-in-fwd-center 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   width: 7.5em;
+  transition: all 400ms ease;
 }
 .header .header__nav .ul li:hover {
   background-color: #c5d6c3;
@@ -504,8 +505,39 @@
   }
 }
 .bloque__main .main__pages .main__form {
-  height: 600px;
-  background-color: rgba(251, 229, 204, 0.5);
+  width: 50rem;
+  border-radius: 8px;
+  box-shadow: 0px 5px 10px rgba(82, 82, 82, 0.5);
+  font-weight: bold;
+  text-align: center;
+  background-color: rgba(235, 235, 235, 0.7);
+  padding: 2rem;
+}
+@media screen and (max-width: 576px) {
+  .bloque__main .main__pages .main__form {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+}
+.bloque__main .main__pages .main__form div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.bloque__main .main__pages .main__form div input, .bloque__main .main__pages .main__form div select {
+  border: 1px solid rgb(235, 235, 235);
+  background-color: rgb(235, 235, 235);
+  transition: all 400ms ease;
+  margin-top: 1rem;
+  text-align: center;
+}
+.bloque__main .main__pages .main__form div input:focus, .bloque__main .main__pages .main__form div select:focus {
+  background-color: #c5d6c3;
+}
+@media screen and (min-width: 1200px) {
+  .bloque__main .main__pages .main__form div input:hover, .bloque__main .main__pages .main__form div select:hover {
+    background-color: #f4ffee;
+  }
 }
 
 .main__btn {

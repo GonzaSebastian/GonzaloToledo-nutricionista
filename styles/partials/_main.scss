@@ -212,8 +212,37 @@
 
         }
         .main__form {
-            height: 600px;
-            background-color: rgb(251, 229, 204, 50%);
+            width: 50rem;
+            border-radius: 8px;
+            box-shadow: 0px 5px 10px $colorGrisSombra;
+            font-weight: bold;
+            text-align: center;
+            background-color: $colorGrisT;
+            padding: 2rem;
+            @include movil {
+                margin-left: 0.5rem;
+                margin-right: 0.5rem;
+            }
+            div {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                input , select{
+                    border: 1px solid $colorGris;
+                    background-color: $colorGris;
+                    transition: all 400ms ease;
+                    margin-top: 1rem;
+                    text-align: center;
+                    &:focus {
+                        background-color: $colorPrimarioOscuro;
+                    }
+                    @include desktop {
+                        &:hover {
+                            background-color: $colorPrimario;
+                        }
+                    }
+                }
+            }
         }
     }
 
