@@ -98,7 +98,7 @@
                     font-size: 20px;
                     padding-top: 0.5rem;
                     padding-bottom: 0.5rem;
-                    background: linear-gradient(90deg, $colorPrimarioOscuro 40%, #ffffff 50%, $colorPrimarioOscuro 60%);
+                    background: linear-gradient(90deg, $colorGris 40%, #ffffff 50%, $colorGris 60%);
                     background-size: 250%;
                     position: relative;
                     animation: gradient 3s ease infinite;
@@ -124,8 +124,8 @@
                     margin-bottom: 2rem;
                     padding: 0.5rem;
                     color: #000000;
-                    background-color: $colorSecundario;
-                    border: 1px solid $colorSecundario;
+                    background-color: $colorGris;
+                    border: 1px solid $colorGris;
                     text-decoration: none;
                     font-weight: 500;
                     border-radius: 4px;

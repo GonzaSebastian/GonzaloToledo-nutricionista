@@ -200,18 +200,25 @@
     width: 8rem;
   }
 }
-.header .header__section h1 {
-  line-height: 3.5rem;
+.header .header__section div {
+  padding-bottom: 0.5rem;
+  font-size: 15rem;
+}
+.header .header__section div h1 {
   font-size: 2.5rem;
+  line-height: 2.6rem;
+  padding-left: 1rem;
 }
 @media screen and (max-width: 1199px) {
-  .header .header__section h1 {
+  .header .header__section div h1 {
     font-size: 2rem;
   }
 }
 @media screen and (max-width: 576px) {
-  .header .header__section h1 {
+  .header .header__section div h1 {
     font-size: 1.4rem;
+    line-height: 2rem;
+    padding-left: 0.5rem;
   }
 }
 .header .header__nav .ul li:nth-child(1) {
@@ -363,7 +370,7 @@
   font-size: 20px;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  background: linear-gradient(90deg, #c5d6c3 40%, #ffffff 50%, #c5d6c3 60%);
+  background: linear-gradient(90deg, rgb(235, 235, 235) 40%, #ffffff 50%, rgb(235, 235, 235) 60%);
   background-size: 250%;
   position: relative;
   animation: gradient 3s ease infinite;
@@ -389,8 +396,8 @@
   margin-bottom: 2rem;
   padding: 0.5rem;
   color: #000000;
-  background-color: #fbe5cc;
-  border: 1px solid #fbe5cc;
+  background-color: rgb(235, 235, 235);
+  border: 1px solid rgb(235, 235, 235);
   text-decoration: none;
   font-weight: 500;
   border-radius: 4px;
