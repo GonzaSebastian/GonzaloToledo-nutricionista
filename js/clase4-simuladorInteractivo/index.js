@@ -1,1 +1,0 @@
-alert("Conoce las herramientas disponibles en la pagina de recetas y de contacto! Podras hacer consultas, solicitar turnos y mas!");
