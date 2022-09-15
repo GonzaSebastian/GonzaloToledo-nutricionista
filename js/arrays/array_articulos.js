@@ -1,20 +1,23 @@
+// EN ESTE ARCHIVO SE ENCUENTRAN LOS DATOS DE CADA ARTICULO DE LA PAGINA ARTICULOS.HTML
 let articulos = [
     {
         id:1,
         titulo:"10 claves de alimentación saludable para el corazón",
         img:"../assets/img/Article10claves.jpg",
-        content:`                        
-        <li>Equilibre la ingesta de alimentos y calorías con la actividad física para mantener un peso saludable.</li>
-        <li>Elija una amplia variedad y coma muchas frutas y verduras para obtener una gama completa de nutrientes de los alimentos en lugar de suplementos.</li>
-        <li>Elija cereales integrales y otros alimentos compuestos principalmente por cereales integrales.</li>
-        <li>Incluya fuentes saludables de proteínas magras y / o con alto contenido de fibra, como proteínas vegetales (nueces y legumbres), pescado o mariscos, productos lácteos bajos en grasa o sin grasa, cortes de carne magra y limite las carnes rojas y procesadas.</li>
-        <li>Utilice aceites vegetales líquidos no tropicales como el aceite de oliva o de girasol.</li>
-        <li>Elija alimentos mínimamente procesados en lugar de alimentos ultraprocesados tanto como sea posible.</li>
-        <li>Minimizar la ingesta de bebidas y alimentos con azúcares añadidos.</li>
-        <li>Elija o prepare alimentos con poca o ninguna sal.</li>
-        <li>Limite el consumo de alcohol; si no bebe, no empiece.</li>
-        <li>Aplique esta guía sin importar dónde se preparen o consuman los alimentos.</li>`,
-        href:`<a href="https://www.intramed.net/contenidover.asp?contenidoid=99581" target="_blank">Leer màs en IntraMed</a>`,
+        content:`
+        <ol>                        
+            <li>Equilibre la ingesta de alimentos y calorías con la actividad física para mantener un peso saludable.</li>
+            <li>Elija una amplia variedad y coma muchas frutas y verduras para obtener una gama completa de nutrientes de los alimentos en lugar de suplementos.</li>
+            <li>Elija cereales integrales y otros alimentos compuestos principalmente por cereales integrales.</li>
+            <li>Incluya fuentes saludables de proteínas magras y / o con alto contenido de fibra, como proteínas vegetales (nueces y legumbres), pescado o mariscos, productos lácteos bajos en grasa o sin grasa, cortes de carne magra y limite las carnes rojas y procesadas.</li>
+            <li>Utilice aceites vegetales líquidos no tropicales como el aceite de oliva o de girasol.</li>
+            <li>Elija alimentos mínimamente procesados en lugar de alimentos ultraprocesados tanto como sea posible.</li>
+            <li>Minimizar la ingesta de bebidas y alimentos con azúcares añadidos.</li>
+            <li>Elija o prepare alimentos con poca o ninguna sal.</li>
+            <li>Limite el consumo de alcohol; si no bebe, no empiece.</li>
+            <li>Aplique esta guía sin importar dónde se preparen o consuman los alimentos.</li>
+        </ol>`,
+        href:`https://www.intramed.net/contenidover.asp?contenidoid=99581`,
     },
     {
         id:2,
@@ -32,7 +35,7 @@ let articulos = [
         <p>Cuando el consumo de leche es bajo, los dos nutrientes de preocupación principal, el calcio y la vitamina D (que es de particular interés en latitudes más altas), se pueden obtener de otros alimentos o suplementos sin las posibles consecuencias negativas de los productos lácteos.</p>
         <p>Para el calcio, fuentes dietéticas alternativas incluyen kale, brócoli, tofu, nueces, porotos y jugo de naranja fortificado; para la vitamina D, los suplementos pueden proporcionar una ingesta adecuada a un costo mucho menor que la leche fortificada.</p>
         <p>Abogando por investigación adicional, las guías sobre leche y productos lácteos equivalentes idealmente deberían designar una ingesta aceptable (como de 0 a 2 porciones por día para adultos), enfatizar sobre la leche baja en grasa como preferible a la leche entera, y desalentar el consumo de productos lácteos endulzados con azúcar en poblaciones con altas tasas de sobrepeso y obesidad.</p>`,
-        href:`<a href="https://www.intramed.net/contenidover.asp?contenidoid=95902" target="_blank">Leer màs en IntraMed</a>`,
+        href:`https://www.intramed.net/contenidover.asp?contenidoid=95902"`,
     },
     {
         id:3,
@@ -65,3 +68,7 @@ let articulos = [
         href:`https://www.intramed.net/contenidover.asp?contenidoid=95145`,
     },
 ]
+
+let articulosFavoritos = [];
+
+
