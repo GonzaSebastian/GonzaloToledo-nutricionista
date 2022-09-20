@@ -2,7 +2,6 @@ const abrirModal = document.querySelector(`.favoritos__btn`);
 const modal = document.querySelector(`.modalA`)
 const cerrarModal = document.querySelector(`.cerrar__btn`);
 
-
 abrirModal.addEventListener(`click`,(e)=>{
     e.preventDefault();
     modal.classList.add(`modalA--mod`);
@@ -14,9 +13,10 @@ cerrarModal.addEventListener(`click`, (e)=>{
 
 const mostrarArticulos = (articulos => {
     const sectionArticulos = document.getElementById("sectionArticulos");
-
+    
     articulos.forEach(articulo => {
         const article = document.createElement("article");
+
         article.innerHTML += `<h5>${articulo.titulo}</h5>
                                 <img src="${articulo.img}"alt="imagen articulo 10 claves">
                                 <div>
@@ -35,29 +35,32 @@ const mostrarArticulos = (articulos => {
 })
 mostrarArticulos(articulos);
 
-
 const indexFavoritos = (articuloId) => {
     const contenedorFavoritos = document.getElementById("contenedor-favoritos");
+    const articuloFiltrado = articulos.find(articulo => articulo.id === articuloId);
     const guardarFavorito = () => {
-        let articulo = articulos.find(articulo => articulo.id === articuloId);
+        // LOCAL STORAGE FAVORITOS
+        // localStorage.setItem(`favorito`, JSON.stringify(articulo));
+        articulosFavoritos.push(articuloFiltrado);
+        // articulo.cantidad = 1;
+        articulosFavoritos.forEach(articulo => {
+            let div = document.createElement("div");
 
-        articulosFavoritos.push(articulo);
-        articulo.cantidad = 1;
-
-        let div = document.createElement("div");
-        // div.classList.add(articulosEnFavoritos)
-        
-        div.innerHTML += `<h5>${articulo.titulo}</h5>
+            div.innerHTML += `<h5>${articulo.titulo}</h5>
                             <img src="${articulo.img}"alt="imagen articulo 10 claves">
                             <div>
                                 ${articulo.content}
                             </div>
                             <a href="${articulo.href}" target="_blank">Leer màs en IntraMed</a>`
 
-        contenedorFavoritos.appendChild(div)
+            contenedorFavoritos.appendChild(div)
+        })
+        // div.classList.add(articulosEnFavoritos)
     }
     guardarFavorito()
 }
+
+
 
 
 
