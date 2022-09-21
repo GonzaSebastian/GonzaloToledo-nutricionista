@@ -4,6 +4,13 @@ const cerrarModal = document.querySelector(`.cerrar__btn`);
 const contenedorFavoritos = document.getElementById("contenedor-favoritos");
 const sectionArticulos = document.getElementById("sectionArticulos");
 
+document.addEventListener(`DOMContentLoaded`, () => {
+    if (localStorage.getItem(`localFavoritos`)) {
+        articulosFavoritos = JSON.parse(localStorage.getItem(`localFavoritos`))
+        actualizarFavoritos()
+    }
+})
+
 abrirModal.addEventListener(`click`,(e)=>{
     e.preventDefault();
     modal.classList.add(`modalA--mod`);
@@ -43,6 +50,16 @@ const indexFavoritos = (articuloId) => {
     actualizarFavoritos()
     console.log(articulosFavoritos);
 }
+
+const eliminarFavorito = (articuloId) => {
+    const articuloEliminado = articulosFavoritos.find((articulo) => articulo.id === articuloId);
+    const indice = articulosFavoritos.indexOf(articuloEliminado);
+    articulosFavoritos.splice(indice, 1);
+    actualizarFavoritos()
+    console.log(articulosFavoritos);
+
+}
+
 const actualizarFavoritos = () => {
     contenedorFavoritos.innerHTML = "";
     articulosFavoritos.forEach((articulo) => {
@@ -51,10 +68,18 @@ const actualizarFavoritos = () => {
                         <h5>${articulo.titulo}</h5>
                         <img src="${articulo.img}"alt="imagen articulo 10 claves">
                         <a href="${articulo.href}" target="_blank">Leer en IntraMed</a>
+                        <button class="btm" id="eliminar${articulo.id}"><i class="bi bi-trash"></i></button>
                         `
-
        contenedorFavoritos.appendChild(div)
+
+       const eliminar = document.getElementById(`eliminar${articulo.id}`);
+       localStorage.setItem(`localFavoritos`, JSON.stringify(articulosFavoritos))
+       eliminar.addEventListener("click", () => {
+           eliminarFavorito(articulo.id)
+           alert(`Se elimino el articulo de sus Favoritos`);
+       })
         
     })
+
 }
 
