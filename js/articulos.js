@@ -1,3 +1,6 @@
+// MENSAJE NOVEDAD HERRAMIENTA FAVORITOS
+Swal.fire('Ahora guarda tus articulos favoritos y leelos cuando quieras')
+
 // CODIGO HERRAMIENTA AGREGAR Y ELIMINAR FAVORITOS
 const abrirModal = document.querySelector(`.favoritos__btn`);
 const modal = document.querySelector(`.modalA`)
