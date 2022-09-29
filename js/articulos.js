@@ -1,5 +1,7 @@
 // MENSAJE NOVEDAD HERRAMIENTA FAVORITOS
-Swal.fire('Ahora guarda tus articulos favoritos y leelos cuando quieras')
+Swal.fire({
+    title:'Ahora guarda tus articulos favoritos y leelos cuando quieras',
+})
 
 // CODIGO HERRAMIENTA AGREGAR Y ELIMINAR FAVORITOS
 const abrirModal = document.querySelector(`.favoritos__btn`);
@@ -118,12 +120,4 @@ const actualizarFavoritos = () => {
 
 }
 
-Swal.fire({
-    title: 'Custom animation with Animate.css',
-    showClass: {
-      popup: 'animate__animated animate__fadeInDown'
-    },
-    hideClass: {
-      popup: 'animate__animated animate__fadeOutUp'
-    }
-  })
+    
