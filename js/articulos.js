@@ -1,6 +1,16 @@
 // MENSAJE NOVEDAD HERRAMIENTA FAVORITOS
 Swal.fire({
-    title:'Ahora guarda tus articulos favoritos y leelos cuando quieras',
+    title: `¡nuevo!`,
+    text:'Ahora guarda tus articulos favoritos y leelos cuando quieras!',
+    showConfirmButton: false,
+    timer: 3000,
+    background: `#c5d6c3`,
+    showClass: {
+        popup: 'animate__animated animate__backInDown'
+    },
+    hideClass: {
+        popup: 'animate__animated animate__backOutDown'
+    },
 })
 
 // CODIGO HERRAMIENTA AGREGAR Y ELIMINAR FAVORITOS
@@ -120,4 +130,3 @@ const actualizarFavoritos = () => {
 
 }
 
-    

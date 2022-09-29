@@ -14,7 +14,7 @@ function crearPaciente () {
     return new Paciente(nombre, edad);
 }
 
-let entrada = prompt("Si es administrador ingrese: admin. Sino ingrese enter para continuar.").toLowerCase()
+// let entrada = prompt("Si es administrador ingrese: admin. Sino ingrese enter para continuar.").toLowerCase()
 
 if (entrada === "admin") {
 
