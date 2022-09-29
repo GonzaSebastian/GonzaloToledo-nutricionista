@@ -1,3 +1,4 @@
+// CODIGO HERRAMIENTA AGREGAR Y ELIMINAR FAVORITOS
 const abrirModal = document.querySelector(`.favoritos__btn`);
 const modal = document.querySelector(`.modalA`)
 const cerrarModal = document.querySelector(`.cerrar__btn`);
@@ -25,7 +26,7 @@ const mostrarArticulos = (articulos => {
         const article = document.createElement("article");
 
         article.innerHTML += `
-                            <button class="btm" id="boton${articulo.id}">Agregar a favoritos</button>
+                            <button class="fav_btn" id="boton${articulo.id}">Agregar a favoritos</button>
                             <h5>${articulo.titulo}</h5>
                             <img src="${articulo.img}"alt="imagen articulo 10 claves">
                             <div>
@@ -38,8 +39,20 @@ const mostrarArticulos = (articulos => {
         const boton = document.getElementById(`boton${articulo.id}`);
         boton.addEventListener("click", () => {
             indexFavoritos(articulo.id)
-            alert(`Se agrego el articulo "${articulo.titulo}" a sus Favoritos`);
-        })
+            // SWEET ALERT FAVORITOS
+            Swal.fire({
+                icon: 'success',
+                title: `Se agrego el articulo "${articulo.titulo}" a sus favoritos.`,
+                showConfirmButton: false,
+                timer: 1800,
+                showClass: {
+                    popup: 'animate__animated animate__flipInX'
+                },
+                hideClass: {
+                    popup: 'animate__animated animate__flipOutX'
+                },
+            });
+        });
     });
 })
 mostrarArticulos(articulos);
@@ -75,11 +88,39 @@ const actualizarFavoritos = () => {
        const eliminar = document.getElementById(`eliminar${articulo.id}`);
        localStorage.setItem(`localFavoritos`, JSON.stringify(articulosFavoritos))
        eliminar.addEventListener("click", () => {
-           eliminarFavorito(articulo.id)
-           alert(`Se elimino el articulo de sus Favoritos`);
-       })
-        
+        // SWEET ALERT CANCELAR
+        Swal.fire({
+            title: 'esta seguro que desea eliminar el articulo?',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#f4ffee',
+            cancelButtonColor: '#fbe5cc',
+            confirmButtonText: 'si, eliminar',
+            customClass: {
+              confirmButton: 'confirmColor',
+              cancelButton: 'cancelColor',
+            },
+          }).then((result) => {
+            if (result.isConfirmed) {
+              Swal.fire(
+                'Eliminado!',
+                'El articulo se elimino de sus favoritos correctamente.',
+                'success'
+              )
+            eliminarFavorito(articulo.id)
+            }
+          })
+        })
     })
 
 }
 
+Swal.fire({
+    title: 'Custom animation with Animate.css',
+    showClass: {
+      popup: 'animate__animated animate__fadeInDown'
+    },
+    hideClass: {
+      popup: 'animate__animated animate__fadeOutUp'
+    }
+  })

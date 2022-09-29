@@ -345,3 +345,18 @@
         text-align: center;
     }
 }
+.fav_btn {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 50%;
+    border: none;
+    background-color: $colorPrimarioOscuro;
+    border-radius: 15px;
+    box-shadow: 0px 5px 10px $colorGrisSombra;
+}
+.swal2-styled.swal2-confirm.confirmColor {
+    color: #000000;
+}
+.swal2-styled.swal2-cancel.cancelColor {
+    color: #000000;
+}

@@ -641,6 +641,24 @@
   }
 }
 
+.fav_btn {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: 50%;
+  border: none;
+  background-color: #c5d6c3;
+  border-radius: 15px;
+  box-shadow: 0px 5px 10px rgba(82, 82, 82, 0.5);
+}
+
+.swal2-styled.swal2-confirm.confirmColor {
+  color: #000000;
+}
+
+.swal2-styled.swal2-cancel.cancelColor {
+  color: #000000;
+}
+
 .footer {
   background-color: #fbe5cc;
 }
