@@ -23,7 +23,7 @@ const sectionArticulos = document.getElementById("sectionArticulos");
 document.addEventListener(`DOMContentLoaded`, () => {
     if (localStorage.getItem(`localFavoritos`)) {
         articulosFavoritos = JSON.parse(localStorage.getItem(`localFavoritos`))
-        actualizarFavoritos()
+        // actualizarFavoritos()
     }
 })
 
@@ -36,55 +36,48 @@ cerrarModal.addEventListener(`click`, (e)=>{
     modal.classList.remove(`modalA--mod`);
 });
 
-const mostrarArticulos = (articulos => {
-    articulos.forEach(articulo => {
-        const article = document.createElement("article");
-
-        article.innerHTML += `
-                            <button class="fav_btn" id="boton${articulo.id}">Agregar a favoritos</button>
-                            <h5>${articulo.titulo}</h5>
-                            <img src="${articulo.img}"alt="imagen articulo 10 claves">
-                            <div>
-                                ${articulo.content}
-                            </div>
-                            <a href="${articulo.href}" target="_blank">Leer màs en IntraMed</a>
+const mostrarArticulos = async () => {
+    try {
+        const respuesta = await fetch ("../js/json/articulos.json");
+        const data = await respuesta.json();
+        data.forEach(articulo => {
+            let article = document.createElement("article");
+            article.innerHTML += `
+                               <button class="fav_btn" id="boton${articulo.id}">Agregar a favoritos</button>
+                               <h5>${articulo.titulo}</h5>
+                                <img src="${articulo.img}"alt="imagen articulo 10 claves">
+                              <div>
+                                 ${articulo.content}
+                              </div>
+                             <a href="${articulo.href}" target="_blank">Leer màs en IntraMed</a>
+             `
+            sectionArticulos.appendChild(article);
+            const boton = document.getElementById(`boton${articulo.id}`);
+            boton.addEventListener("click", () => {
+                indexFavoritos(articulo.id)
+            })
+        })
+    } catch (error) {
+        let div = document.createElement("div");
+        div.innerHTML += `
+                            <h5>ERROR DE CONEXION CON EL SERVIDOR</h5>
                             `
-        sectionArticulos.appendChild(article)
-
-        const boton = document.getElementById(`boton${articulo.id}`);
-        boton.addEventListener("click", () => {
-            indexFavoritos(articulo.id)
-            // SWEET ALERT FAVORITOS
-            Swal.fire({
-                icon: 'success',
-                title: `Se agrego el articulo "${articulo.titulo}" a sus favoritos.`,
-                showConfirmButton: false,
-                timer: 1800,
-                showClass: {
-                    popup: 'animate__animated animate__flipInX'
-                },
-                hideClass: {
-                    popup: 'animate__animated animate__flipOutX'
-                },
-            });
-        });
-    });
-})
-mostrarArticulos(articulos);
+        sectionArticulos.appendChild(div);
+    }
+}
+mostrarArticulos()
 
 const indexFavoritos = (articuloId) => {
     const articuloFiltrado = articulos.find((articulo) => articulo.id === articuloId);
     articulosFavoritos.push(articuloFiltrado);
-    actualizarFavoritos()
-    console.log(articulosFavoritos);
+    // actualizarFavoritos()
 }
 
 const eliminarFavorito = (articuloId) => {
     const articuloEliminado = articulosFavoritos.find((articulo) => articulo.id === articuloId);
     const indice = articulosFavoritos.indexOf(articuloEliminado);
     articulosFavoritos.splice(indice, 1);
-    actualizarFavoritos()
-    console.log(articulosFavoritos);
+    // actualizarFavoritos()
 
 }
 
