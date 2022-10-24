@@ -9,6 +9,7 @@ function sendForm(event) {
   let dni = form.get(`dni`);
   let mail = form.get(`email`);
   let error = document.getElementById(`error`);
+  let datos = {name, dni, mail}
   let mensajeError = [];
 
   if (name == "") {
@@ -20,5 +21,14 @@ function sendForm(event) {
   if (mail == ``) {
     mensajeError.push(`Ingresa tu correo electronico`);
   }
-  error.innerHTML = mensajeError.join(` - `);
+
+  if (mensajeError == ``) {
+    Swal.fire({
+      title: 'Usted envio:',
+      text: `nombre: ` + datos.name + `- dni: ` + datos.dni + `-   Email: ` + datos.mail
+    })
+  } else {
+     error.innerHTML = mensajeError.join(` - `);
+  }
 }
+
