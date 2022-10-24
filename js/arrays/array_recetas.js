@@ -1,7 +1,7 @@
-// EN ESTE ARCHIVO SE ENCUENTRAN LOS DATOS DE CADA ARTICULO DE LA PAGINA ARTICULOS.HTML
+// EN ESTE ARCHIVO SE ENCUENTRAN LOS DATOS DE CADA RECETA DE LA PAGINA RECETAS.HTML
 let recetas = [
   {
-    id: 1,
+    id: 0,
     titulo: "PIZZA CASERA",
     img: "../assets/img/pizza1.jpg",
     content: `
@@ -9,7 +9,7 @@ let recetas = [
             😊La porción es de 2 y te sugiero hacerte una entradita con vegetales para sumar fibra y lograr mayor saciedad.`,
   },
   {
-    id: 2,
+    id: 1,
     titulo: "SOPA CREMA DE ARVEJAS",
     img: "../assets/img/sopacrema.jpeg",
     content: `
@@ -17,7 +17,7 @@ let recetas = [
             Si dejan un poco para el otro día, el sabor se concentra aún más 🤤. Nada mejor que una sopita para reconfortarnos el cuerpo.`,
   },
   {
-    id: 3,
+    id: 2,
     titulo: "DOSAS VEGETARIANAS",
     img: "../assets/img/dosas.jpeg",
     content: `
@@ -30,7 +30,7 @@ let recetas = [
             🧇Por último, rellena con lo que quieras! .`,
   },
   {
-    id: 4,
+    id: 3,
     titulo: "PASTEL DE PAPA DE ARVEJAS",
     img: "../assets/img/pasteldepapa.jpeg",
     content: `
@@ -40,7 +40,7 @@ let recetas = [
             👉🏽Por último, al puré de papa no le pongas nada, solo pisa y suma sal y un chorrito de aceite. Arma el pastel y llévalo a horno fuerte hasta que veas doradito el puré. Servilo con queso cremoso encima o en hebras!`,
   },
   {
-    id: 5,
+    id: 4,
     titulo: "CALABAZA RELLENA",
     img: "../assets/img/calabazarellena.jpeg",
     content: `
@@ -48,14 +48,14 @@ let recetas = [
             👉🏽Para el relleno rehoguen cebolla, morrones de varios colores, y vegetales cómo zucchini todo cortadito en cubos. A esto le agregan (previamente remojados y cocidos) 1/2 taza de lentejas o garbanzos o porotos y choclo. Cocinen bien todo hasta que la cebolla esté transparente y con eso rellenan, pero antes de sacarla del horno, le ponen quesito y 🤤<br>`,
   },
   {
-    id: 6,
+    id: 5,
     titulo: "FALAFEL ARGENTO",
     img: "../assets/img/falafel.jpeg",
     content: `
             Siguiendo la hermosa receta de @paulinacocina prepare estas albóndigas de garbanzos que son perfectas para hacer que los chicos incorporen legumbres a su alimentación y porque no también para adultos renegados! ✨Ingredientes: 2 tazas de garbanzos (previamente remojados 8 a 12 hs y cocidos, si querés ver cómo, busca el vídeo donde hablo de eso), 1 taza de harina, 1/2 cebolla en cubitos, 1 ajo picado, un puñadito de perejil y verdeo picado (si conseguís cilantro mejor), un poquito de pan rallado y el jugo de 1 limón. ✨Procedimiento: procesar los garbanzos y agrega el resto de los ingredientes. Amasar hasta integrar todo. Con las manos mojadas, formar bolitas y pasarlas por pan rallado. Cocinar en una sartén con aceite bien caliente hasta que estén doradas (no es necesario sumergirlas en aceite, en la foto se ve la cantidad que use). Servir con alguna ensaladita 🧡`,
   },
   {
-    id: 7,
+    id: 6,
     titulo: "🍔Burgers de quínoa🍔",
     img: "../assets/img/burguerquinoa.jpeg",
     content: `
